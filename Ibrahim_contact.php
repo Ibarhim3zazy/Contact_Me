@@ -30,7 +30,7 @@
         <div class="card-contact">
           <h4>تواصل معي</h4>
         </div>
-        <div class="card-social email" onclick="mail()">
+        <div class="card-social email" onclick="Ibrahim_mail()">
           <div class="icon-wrapper">
             <i class="fas fa-envelope"></i>
           </div>
@@ -40,7 +40,7 @@
           </div>
           <span>></span>
         </div>
-        <div class="card-social fb" onclick="messenger()">
+        <div class="card-social fb" onclick="Ibrahim_messenger()">
           <div class="icon-wrapper">
             <i class="fa-brands fa-facebook-messenger"></i>
           </div>
@@ -50,7 +50,7 @@
           </div>
           <span>></span>
         </div>
-        <div class="card-social Whatsapp" onclick="whatsapp()">
+        <div class="card-social Whatsapp" onclick="Ibrahim_whatsapp()">
           <div class="icon-wrapper">
             <i class="fa-brands fa-whatsapp"></i>
           </div>
@@ -60,7 +60,7 @@
           </div>
           <span>></span>
         </div>
-        <div class="card-social telegram" onclick="telegram()">
+        <div class="card-social telegram" onclick="Ibrahim_telegram()">
           <div class="icon-wrapper">
             <i class="fa-brands fa-telegram"></i>
           </div>

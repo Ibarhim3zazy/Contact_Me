@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #051321;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.target_con{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.target_con h2{
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+}
+.target_con span{
+  color: #fff;
+  font-size: 24px;
+}
+.time_target span{
+  color: #6f6;
+}
+.money_target span{
+  color: #f66;
+}
+.money_target, .time_target{
+  text-align: center;
+}
+.progress_con{
+  width: 60%;
+  height: 30px;
+  margin: 30px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  background-color: #f1f1f1;
+  border-radius: 32px;
+}
+.progress_bar{
+  height: inherit;
+  padding: 0.01em 16px;
+  color: #fff;
+  background-color: #2196F3;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+}
+table{
+  width: 80%;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 16px;
+  border: none;
+  border-spacing: 0;
+}
+table tr:first-of-type{
+  background-color: #548235 !important;
+  color: #000;
+}
+table tr:nth-child(even){
+  background-color: #C6E0B4;
+  color: #000;
+}
+table tr:nth-child(odd){
+  background-color: #E2EFDA;
+  color: #000;
+}
+table tr th{
+  padding: 10px 0;
+}
+table tr td{
+  text-align: center;
+  padding: 20px 0;
+}
