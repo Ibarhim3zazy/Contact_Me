@@ -212,3 +212,19 @@ body {
   will-change: top, left, width;
   transform-origin: 0 0;
 }
+
+#f_alert, #f_save{
+  width: fit-content;
+  padding: 10px 40px;
+  border-radius: 3px 3px 3px 3px;
+  color: #270;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: #DFF2BF;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 9999;
+}

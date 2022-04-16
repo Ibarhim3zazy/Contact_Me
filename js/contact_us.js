@@ -1,3 +1,6 @@
+function success() {
+	document.getElementById('success-msg').style.display = "none";
+}
 function GetXmlHttpObject(){
 	if (window.XMLHttpRequest)
 		return new XMLHttpRequest();

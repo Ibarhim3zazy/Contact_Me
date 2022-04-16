@@ -45,46 +45,44 @@
             <input type="hidden" name="type" value="f_date">
             <button type="submit">اذهب</button>
         </form>
-        <h2>النتائج</h2>
+        <h2 style="margin-top: 80px">النتائج</h2>
       </div>
-      <table>
-        <tr>
-          <th>المسلسل</th>
-          <th>الاسم</th>
-          <th>رقم الهاتف</th>
-          <th>المبلغ</th>
-          <th>عدد الاسهم</th>
-          <th>التاريخ</th>
-          <th>التوقيت</th>
-          <th>نوع الاستلام</th>
-          <th>اخري</th>
-        </tr>
-        <?php
-        if(isset($_GET['search']) == true && isset($_GET['type']) == true)
-        {
-           $search = $_GET['search'];
-           $type = $_GET['type'];
-           $search_result = $con->query("SELECT * FROM form WHERE $type LIKE '%$search%'");
-           if ($search_result != true) {
-             echo "الرجاء التواصل معنا (ERORR)";
-           }
-           $index = 1;
-             while ($row = $search_result-> fetch_assoc()){
-               echo '<tr>
-                       <td>'.$index++.'</td>
-                       <td>'.$row['name'].'</td>
-                       <td>'.$row['phone_num'].'</td>
-                       <td>'.$row['money'].'</td>
-                       <td>'.$row['arrows'].'</td>
-                       <td>'.$row['f_date'].'</td>
-                       <td>'.$row['f_time'].'</td>
-                       <td>'.$row['type'].'</td>
-                       <td>'.$row['info'].'</td>
-                     </tr>';
-             };
-        };
-         ?>
-      </table>
+      <div class="table_con">
+        <table>
+          <tr>
+            <th>المسلسل</th>
+            <th>المبلغ</th>
+            <th>عدد الاسهم</th>
+            <th>التاريخ</th>
+            <th>التوقيت</th>
+            <th>نوع الاستلام</th>
+            <th>اخري</th>
+          </tr>
+          <?php
+          if(isset($_GET['search']) == true && isset($_GET['type']) == true)
+          {
+             $search = $_GET['search'];
+             $type = $_GET['type'];
+             $search_result = $con->query("SELECT * FROM form WHERE $type LIKE '%$search%'");
+             if ($search_result != true) {
+               echo "الرجاء التواصل معنا (ERORR)";
+             }
+             $index = 1;
+               while ($row = $search_result-> fetch_assoc()){
+                 echo '<tr>
+                         <td>'.$index++.'</td>
+                         <td>'.$row['f_money'].'</td>
+                         <td>'.$row['arrows'].'</td>
+                         <td>'.$row['f_date'].'</td>
+                         <td>'.$row['f_time'].'</td>
+                         <td>'.$row['type'].'</td>
+                         <td>'.$row['info'].'</td>
+                       </tr>';
+               };
+          };
+           ?>
+        </table>
+      </div>
     </div>
     <script src="js/search.js"></script>
   </body>

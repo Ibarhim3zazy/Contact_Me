@@ -54,13 +54,26 @@
   display: flex;
   align-items: center;
 }
+.table_con{
+  width: 90%;
+  overflow-x: auto;
+}
 table{
-  width: 80%;
+  width: 100%;
   color: #fff;
   margin-top: 40px;
   font-size: 16px;
   border: none;
   border-spacing: 0;
+}
+@media (max-width: 768px) {
+  .progress_con{
+    width: 90%;
+  }
+  table{
+    width: 95%;
+    font-size: 12px;
+  }
 }
 table tr:first-of-type{
   background-color: #548235 !important;
@@ -75,9 +88,22 @@ table tr:nth-child(odd){
   color: #000;
 }
 table tr th{
-  padding: 10px 0;
+  padding: 10px 25px;
 }
 table tr td{
   text-align: center;
   padding: 20px 0;
+}
+table tr td form [type="submit"]{
+  cursor: pointer;
+  border: none;
+  border-radius: 20%;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+#f_alert:hover{
+  background-color: #8f8;
+}
+#del:hover{
+  background-color: #f66;
 }

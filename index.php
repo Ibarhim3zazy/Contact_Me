@@ -45,27 +45,29 @@
         </div>
         <h2>تبرعات اليوم</h2>
       </div>
-      <table>
-        <tr>
-          <th>المسلسل</th>
-          <th>المبلغ</th>
-          <th>عدد الاسهم</th>
-          <th>التاريخ</th>
-          <th>التوقيت</th>
-        </tr>
-        <?php
-        $index = 1;
-          while ($row = $result-> fetch_assoc()){
-            echo '<tr>
-                    <td>'.$index++.'</td>
-                    <td>'.$row['money'].'</td>
-                    <td>'.$row['arrows'].'</td>
-                    <td>'.$row['f_date'].'</td>
-                    <td>'.$row['f_time'].'</td>
-                  </tr>';
-          }
-         ?>
-      </table>
+      <div class="table_con">
+        <table>
+          <tr>
+            <th>المسلسل</th>
+            <th>المبلغ</th>
+            <th>عدد الاسهم</th>
+            <th>التاريخ</th>
+            <th>التوقيت</th>
+          </tr>
+          <?php
+          $index = 1;
+            while ($row = $result-> fetch_assoc()){
+              echo '<tr>
+                      <td>'.$index++.'</td>
+                      <td>'.$row['f_money'].'</td>
+                      <td>'.$row['arrows'].'</td>
+                      <td>'.$row['f_date'].'</td>
+                      <td>'.$row['f_time'].'</td>
+                    </tr>';
+            }
+           ?>
+        </table>
+      </div>
     </div>
 
     <script src="js/script.js"></script>

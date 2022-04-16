@@ -11,7 +11,7 @@
     />
     <title>Contact Card</title>
   </head>
-  <body>
+  <body onload="success()">
     <?php require 'header.php'; ?>
       <div class="container">
         <div class="contact_con">
@@ -26,7 +26,7 @@
 <a href="javascript:">دعاء غنيم ( قسم حاسب )</a>
 <a href="javascript:">أمنيه راشد ( قسم حاسب )</a><br>
 فرع منيه النصر:<br><br>
-- <a href="Mostafa_contact.php">مصطفى اسامه ( قسم حاسب )</a><br>
+<a href="Mostafa_contact.php">مصطفى اسامه ( قسم حاسب )</a><br>
 فرع ميت غمر:<br><br>
 <a href="Ibrahim_contact.php"> ابراهيم السيد عزازى ( قسم حاسب )</a>
 <a href="javascript:">مي اسامه ( قسم اعلام )</a><br>

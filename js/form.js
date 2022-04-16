@@ -78,3 +78,23 @@ function count_money() {
   let count_money = document.getElementById('arrows').value * 100;
   document.getElementById('money').value = count_money;
 }
+
+function success_msg() {
+  let f_alert = document.getElementById('f_alert');
+  let f_save = document.getElementById('f_save');
+  if (f_alert != null) {
+    if (getComputedStyle(f_alert , null).display == "block") {
+      setTimeout(function(){
+        f_alert.style.display = "none";
+        window.location.href = "../Contact_Me/all.php";
+      }, 3000);
+    }
+  }
+  if(f_save != null){
+    if (getComputedStyle(f_save , null).display == "block") {
+      setTimeout(function(){
+        f_save.style.display = "none";
+      }, 3000);
+    };
+  }
+  };
