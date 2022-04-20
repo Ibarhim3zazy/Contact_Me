@@ -19,8 +19,8 @@
             <img src="images/person.png" alt="Person" />
           </div>
           <div class="person-info">
-            <h3>ابراهيم السيد عزازي</h3>
-            <p dir="rtl">طالب بكلية التربيه النوعيه فرع ميت غمر بالفرقه الرابع قسم حاسب الي</p>
+            <h3>محمد الشريف</h3>
+            <p dir="rtl">طالب بكلية التربيه النوعيه فرع المنصوره بالفرقه الرابع قسم حاسب الي</p>
           </div>
           <button class="card-btn">
             <span class="card-btn-contact">تواصل معي</span>
@@ -30,23 +30,13 @@
         <div class="card-contact">
           <h4>تواصل معي</h4>
         </div>
-        <div class="card-social email" onclick="Mohamed_mail()">
-          <div class="icon-wrapper">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-details">
-            <h4>Email</h4>
-            <p>Ibrahim3zazy@gmail.com</p>
-          </div>
-          <span>></span>
-        </div>
         <div class="card-social fb" onclick="Mohamed_messenger()">
           <div class="icon-wrapper">
             <i class="fa-brands fa-facebook-messenger"></i>
           </div>
           <div class="contact-details">
             <h4>Messenger</h4>
-            <p>@Ibrahim3zazy</p>
+            <p>Mohamed Elsherif</p>
           </div>
           <span>></span>
         </div>
@@ -56,7 +46,7 @@
           </div>
           <div class="contact-details">
             <h4>Whatsapp</h4>
-            <p>01145452440</p>
+            <p>01010512799</p>
           </div>
           <span>></span>
         </div>
@@ -66,7 +56,7 @@
           </div>
           <div class="contact-details">
             <h4>Telegram</h4>
-            <p>01145452440</p>
+            <p>01010512799</p>
           </div>
           <span>></span>
         </div>

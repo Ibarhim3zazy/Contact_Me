@@ -13,30 +13,25 @@ function Ibrahim_whatsapp() {
 function Ibrahim_telegram() {
   window.open('https://t.me/Ibrahim3zazy');
 }
-function Mohamed_mail() {
-  window.open('mailto:Ibrahim3zazy@gmail.com?subject=تبرعات');
-}
 function Mohamed_messenger() {
-  window.open('http://m.me/.Ibrahim3zazy');
+  window.open('http://m.me/100009683534482');
 }
 function Mohamed_whatsapp() {
-  window.open('https://wa.me/+2001145452440');
+  window.open('https://wa.me/+2001010512799');
 }
 function Mohamed_telegram() {
-  window.open('https://t.me/Ibrahim3zazy');
+  window.open('https://t.me/M_Elsherif');
 }
 function Mostafa_mail() {
-  window.open('mailto:Ibrahim3zazy@gmail.com?subject=تبرعات');
-}
-function Mostafa_messenger() {
-  window.open('http://m.me/.Ibrahim3zazy');
+  window.open('mailto:BOSAQER5@gmail.com?subject=تبرعات');
 }
 function Mostafa_whatsapp() {
-  window.open('https://wa.me/+2001145452440');
+  window.open('https://wa.me/+2001012891276');
 }
 function Mostafa_telegram() {
-  window.open('https://t.me/Ibrahim3zazy');
+  window.open('https://t.me/MustafaOsama');
 }
+
 
 function timer() {
   let date_timer = document.getElementById('date_timer').value
@@ -72,6 +67,6 @@ var x = setInterval(function() {
 
   let allmoney = parseInt(document.getElementById('allmoney').innerHTML);
   allmoney_ = ((allmoney / 60000) * 100).toFixed(2);
-  document.getElementById('progress_bar').innerHTML = allmoney_;
+  document.getElementById('progress_bar').innerHTML = allmoney_ + '%';
   document.getElementById('progress_bar').style.width = allmoney_ + '%';
 }
