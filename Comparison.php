@@ -18,17 +18,16 @@
       $num = $con->affected_rows;
       if($num != 0 && $result == true){
         $row = $result-> fetch_assoc();
-        $winner = array("mg" => $row['money_mg'],  "mn" => $row['money_mn'], "man" => $row['money_man']);
-        sort($winner);
-        $branch_1 = "فرع المنصوره";
-        $money_1 = $winner[2];
-        $money_p_1 = $money_1 / 100 ;
-        $branch_2 = "فرع ميت غمر";
-        $money_2 = $winner[1];
-        $money_p_2 = $money_2 / 100 ;
-        $branch_3 = "فرع منية النصر";
-        $money_3 = $winner[0];
-        $money_p_3 = $money_3 / 100 ;
+        $winner = array("فرع ميت غمر" => $row['money_mg'],  "فرع منية النصر" => $row['money_mn'], "فرع المنصوره" => $row['money_man']);
+        arsort($winner);
+        $i = 0;
+          foreach ($winner as $key => $value) {
+            $i++;
+            print_r($i);
+            $branch_[$i] = $key;
+            $money_[$i] = $value;
+            $money_p_[$i] = $money_[$i] / 100 ;
+        };
         print_r($winner);
       }
      ?>
@@ -39,26 +38,26 @@
 
         <ul class="pricingTable-firstTable">
           <li class="pricingTable-firstTable_table">
-            <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_3) ?></h1>
-            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span><?= htmlentities($money_3) ?></span><span>EGP</span></p>
+            <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_[3]) ?></h1>
+            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span><?= htmlentities($money_[3]) ?></span><span>EGP</span></p>
             <ul class="pricingTable-firstTable_table__options">
-              <li><?= htmlentities($money_p_3) ?> سهم</li>
+              <li><?= htmlentities($money_p_[3]) ?> سهم</li>
             </ul>
             <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'contact_us.php';">تبرع الان</button>
             <span class="num">الثالث</span>
           </li><li class="pricingTable-firstTable_table">
-            <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_1) ?></h1>
-            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span><?= htmlentities($money_1) ?></span><span>EGP</span></p>
+            <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_[1]) ?></h1>
+            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span><?= htmlentities($money_[1]) ?></span><span>EGP</span></p>
             <ul class="pricingTable-firstTable_table__options">
-              <li><?= htmlentities($money_p_1) ?> سهم</li>
+              <li><?= htmlentities($money_p_[1]) ?> سهم</li>
             </ul>
             <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'contact_us.php';">تبرع الان</button>
             <span class="num">الاول</span>
           </li><li class="pricingTable-firstTable_table">
-            <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_2) ?></h1>
-            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span><?= htmlentities($money_2) ?></span><span>EGP</span></p>
+            <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_[2]) ?></h1>
+            <p class="pricingTable-firstTable_table__pricing"><span>$</span><span><?= htmlentities($money_[2]) ?></span><span>EGP</span></p>
             <ul class="pricingTable-firstTable_table__options">
-              <li><?= htmlentities($money_p_2) ?> سهم</li>
+              <li><?= htmlentities($money_p_[2]) ?> سهم</li>
             </ul>
             <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'contact_us.php';">تبرع الان</button>
             <span class="num">الثاني</span>
