@@ -70,6 +70,16 @@
           </div>
           <span>></span>
         </div>
+        <div class="card-social sarhne" onclick="Ibrahim_sarhne()">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-user-secret"></i>
+          </div>
+          <div class="contact-details">
+            <h4>sarhne</h4>
+            <p>azazi</p>
+          </div>
+          <span>></span>
+        </div>
       </div>
     </div>
 

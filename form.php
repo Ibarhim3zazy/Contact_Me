@@ -76,33 +76,33 @@
           <?php
           if (isset($type) && $type == 'اخري') {
             echo "<option value='فودافون كاش'>فودافون كاش</option>
-                <option value='ميت غمر (لم يتم التسليم)'>ميت غمر (لم يتم التسليم)</option>
-                <option value='منية النصر (لم يتم التسليم)'>منية النصر (لم يتم التسليم)</option>
-                <option value='المنصوره (لم يتم التسليم)'>المنصوره (لم يتم التسليم)</option>
+                <option value='ميت غمر'>ميت غمر</option>
+                <option value='منية النصر'>منية النصر</option>
+                <option value='المنصوره'>المنصوره</option>
                 <option selected value='اخري'>اخري</option>";
           }elseif (isset($type) && $type == 'ميت غمر (لم يتم التسليم)') {
               echo "<option value='فودافون كاش'>فودافون كاش</option>
-                  <option selected value='ميت غمر (لم يتم التسليم)'>ميت غمر (لم يتم التسليم)</option>
-                  <option value='منية النصر (لم يتم التسليم)'>منية النصر (لم يتم التسليم)</option>
-                  <option value='المنصوره (لم يتم التسليم)'>المنصوره (لم يتم التسليم)</option>
+                  <option value='ميت غمر'>ميت غمر</option>
+                  <option value='منية النصر'>منية النصر</option>
+                  <option value='المنصوره'>المنصوره</option>
                   <option value='اخري'>اخري</option>";
                 }elseif (isset($type) && $type == 'منية النصر (لم يتم التسليم)') {
                   echo "<option value='فودافون كاش'>فودافون كاش</option>
-                      <option value='ميت غمر (لم يتم التسليم)'>ميت غمر (لم يتم التسليم)</option>
-                      <option selected value='منية النصر (لم يتم التسليم)'>منية النصر (لم يتم التسليم)</option>
-                      <option value='المنصوره (لم يتم التسليم)'>المنصوره (لم يتم التسليم)</option>
+                      <option value='ميت غمر'>ميت غمر</option>
+                      <option value='منية النصر'>منية النصر</option>
+                      <option value='المنصوره'>المنصوره</option>
                       <option value='اخري'>اخري</option>";
             }elseif (isset($type) && $type == 'المنصوره (لم يتم التسليم)') {
               echo "<option value='فودافون كاش'>فودافون كاش</option>
-                  <option value='ميت غمر (لم يتم التسليم)'>ميت غمر (لم يتم التسليم)</option>
-                  <option value='منية النصر (لم يتم التسليم)'>منية النصر (لم يتم التسليم)</option>
-                  <option selected value='المنصوره (لم يتم التسليم)'>المنصوره (لم يتم التسليم)</option>
+                  <option value='ميت غمر'>ميت غمر</option>
+                  <option value='منية النصر'>منية النصر</option>
+                  <option value='المنصوره'>المنصوره</option>
                   <option value='اخري'>اخري</option>";
         }else {
           echo "<option selected value='فودافون كاش'>فودافون كاش</option>
-              <option value='ميت غمر (لم يتم التسليم)'>ميت غمر (لم يتم التسليم)</option>
-              <option value='منية النصر (لم يتم التسليم)'>منية النصر (لم يتم التسليم)</option>
-              <option value='المنصوره (لم يتم التسليم)'>المنصوره (لم يتم التسليم)</option>
+              <option value='ميت غمر'>ميت غمر</option>
+              <option value='منية النصر'>منية النصر</option>
+              <option value='المنصوره'>المنصوره</option>
               <option value='اخري'>اخري</option>";
         }
            ?>
@@ -130,6 +130,7 @@
             $time= htmlentities($_POST['time']);
             $info= htmlentities($_POST['info']);
             $type= htmlentities($_POST['type']);
+            $money_branch = $money;
             $result = $con->query("INSERT INTO form VALUES(NULL, '$name', '$phone', '$money', '$arrows', '$date','$time','$info','$type');");
             $allmoney_result = $con->query("SELECT * FROM general;");
             if($allmoney_result == true){
@@ -137,7 +138,17 @@
               $money += $row_allmoney['allmoney'];
             }
             $money_result = $con->query("UPDATE general SET allmoney='$money' WHERE active='true';");
-            if ($result == true && $money_result == true){
+          if (isset($type) && $type == 'ميت غمر') {
+            $money_branch += $row_allmoney['money_mg'];
+            $money_result_branch = $con->query("UPDATE general SET money_mg='$money_branch' WHERE active='true';");
+            }elseif (isset($type) && $type == 'منية النصر') {
+              $money_branch += $row_allmoney['money_mn'];
+              $money_result_branch = $con->query("UPDATE general SET money_mn='$money_branch' WHERE active='true';");
+            }elseif (isset($type) && $type == 'المنصوره') {
+              $money_branch += $row_allmoney['money_man'];
+              $money_result_branch = $con->query("UPDATE general SET money_man='$money_branch' WHERE active='true';");
+        }
+            if ($result == true && $money_result == true && $money_result_branch == true){
                 echo '<div id="f_save">
                         <i class="fa fa-check"></i>
                         تم الحفظ بنجاح<br>
@@ -166,7 +177,35 @@
             $info= htmlentities($_POST['info']);
             $type= htmlentities($_POST['type']);
         $alert_result = $con->query("UPDATE form SET name='$name',phone_num='$phone_num',f_money='$money',arrows='$arrows',f_date='$date',f_time='$time',info='$info',type='$type' WHERE id='$user_id';");
-        if ($alert_result == true) {
+        // money mg result
+        $money_mg_result = $con->query("SELECT * FROM form WHERE type='ميت غمر';");
+        if ($money_mg_result == true) {
+          $money_branch = 0;
+          while ($money_mg_row = $money_mg_result-> fetch_assoc()){
+            $money_branch += $money_mg_row['f_money'];
+          }
+          $money_result_branch = $con->query("UPDATE general SET money_mg='$money_branch' WHERE active='true';");
+        }
+        // money mn result
+        $money_mn_result = $con->query("SELECT * FROM form WHERE type='منية النصر';");
+        if ($money_mn_result == true) {
+          $money_branch = 0;
+          while ($money_mn_row = $money_mn_result-> fetch_assoc()){
+            $money_branch += $money_mn_row['f_money'];
+          }
+          $money_result_branch = $con->query("UPDATE general SET money_mn='$money_branch' WHERE active='true';");
+        }
+        // money man result
+        $money_man_result = $con->query("SELECT * FROM form WHERE type='المنصوره';");
+        if ($money_man_result == true) {
+          $money_branch = 0;
+          while ($money_man_row = $money_man_result-> fetch_assoc()){
+            $money_branch += $money_man_row['f_money'];
+          }
+          $money_result_branch = $con->query("UPDATE general SET money_man='$money_branch' WHERE active='true';");
+        }
+        if ($alert_result == true && $money_mg_result == true &&
+            $money_mn_result == true && $money_man_result == true) {
           echo '<div id="f_alert">
                   <i class="fa fa-check"></i>
                   تم التعديل بنجاح<br>

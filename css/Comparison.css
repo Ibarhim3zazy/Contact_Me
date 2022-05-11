@@ -71,7 +71,7 @@
   .pricingTable-firstTable {
     flex-direction: column;
   }
-  .pricingTable-firstTable_table:last-of-type {
+  .pricingTable-firstTable_table:first-of-type {
     order: 3;
     z-index: 1;
   }

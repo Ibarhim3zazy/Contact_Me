@@ -20,6 +20,7 @@
           <span></span>
           <ul id="menu">
             <li><a href="index.php">الرئيسيه</a></li>
+            <li><a href="comparison.php">تبرع الان</a></li>
             <li><a href="search.php">بحث</a></li>
             <li><a href="contact_us.php">تواصل معنا</a></li>
             <?php

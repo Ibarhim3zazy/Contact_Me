@@ -53,6 +53,7 @@
   border-radius: 32px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .table_con{
   width: 90%;

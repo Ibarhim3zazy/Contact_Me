@@ -39,7 +39,7 @@
             $num = $con->affected_rows;
             if($num != 0 && $allmoney == true){
               $row_target = $allmoney-> fetch_assoc();
-              echo '<span id="allmoney">'.$row_target['allmoney'].'LE </span><span>من 60,000 الف</span>';
+              echo '<span id="allmoney">'.$row_target['allmoney'].'LE </span><span>من 30,000 الف</span>';
             }
            ?>
         </div>

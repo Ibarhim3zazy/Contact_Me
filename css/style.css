@@ -9,7 +9,7 @@ html {
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #051321;
   display: flex;
   justify-content: center;
@@ -173,6 +173,11 @@ html {
 .telegram{
   transition: all 0.5s 0.9s;
 }
+
+.sarhne{
+  transition: all 0.5s 1.1s;
+}
+
 .change .card-social {
   transform: translateY(0);
   opacity: 1;
@@ -204,6 +209,11 @@ html {
 .telegram .icon-wrapper {
   background-color: #31A8E0;
 }
+
+.sarhne .icon-wrapper {
+  background-color: #F1776C;
+}
+
 .icon-wrapper i {
   font-size: 2rem;
   color: #fff;
@@ -229,7 +239,11 @@ html {
 }
 
 .telegram h4{
-  color: #31A8E0;
+  color: #31A8E0;#F1776C
+}
+
+.sarhne h4{
+  color: #F1776C;
 }
 
 .contact-details p {

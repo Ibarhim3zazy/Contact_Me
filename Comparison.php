@@ -23,12 +23,10 @@
         $i = 0;
           foreach ($winner as $key => $value) {
             $i++;
-            print_r($i);
             $branch_[$i] = $key;
             $money_[$i] = $value;
             $money_p_[$i] = $money_[$i] / 100 ;
         };
-        print_r($winner);
       }
      ?>
     <div class="container">
@@ -43,7 +41,10 @@
             <ul class="pricingTable-firstTable_table__options">
               <li><?= htmlentities($money_p_[3]) ?> سهم</li>
             </ul>
-            <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'contact_us.php';">تبرع الان</button>
+            <h1 class="pricingTable-firstTable_table__header">تبرع الان عن طريق فودافون كاش</h1>
+            <button class="pricingTable-firstTable_table__getstart">01014794899</button>
+            <h1 style="margin-top: 30px;">او تواصل معنا</h1>
+            <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'Mostafa_contact.php';">تبرع الان</button>
             <span class="num">الثالث</span>
           </li><li class="pricingTable-firstTable_table">
             <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_[1]) ?></h1>
@@ -51,7 +52,10 @@
             <ul class="pricingTable-firstTable_table__options">
               <li><?= htmlentities($money_p_[1]) ?> سهم</li>
             </ul>
-            <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'contact_us.php';">تبرع الان</button>
+            <h1 class="pricingTable-firstTable_table__header">تبرع الان عن طريق فودافون كاش</h1>
+            <button class="pricingTable-firstTable_table__getstart">01014794899</button>
+            <h1 style="margin-top: 30px;">او تواصل معنا</h1>
+            <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'Mohamed_contact.php';">تبرع الان</button>
             <span class="num">الاول</span>
           </li><li class="pricingTable-firstTable_table">
             <h1 class="pricingTable-firstTable_table__header"><?= htmlentities($branch_[2]) ?></h1>
@@ -59,7 +63,10 @@
             <ul class="pricingTable-firstTable_table__options">
               <li><?= htmlentities($money_p_[2]) ?> سهم</li>
             </ul>
-            <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'contact_us.php';">تبرع الان</button>
+            <h1 class="pricingTable-firstTable_table__header">تبرع الان عن طريق فودافون كاش</h1>
+            <button class="pricingTable-firstTable_table__getstart">01014794899</button>
+            <h1 style="margin-top: 30px;">او تواصل معنا</h1>
+            <button class="pricingTable-firstTable_table__getstart" onclick="window.location.href = 'Ibrahim_contact.php';">تبرع الان</button>
             <span class="num">الثاني</span>
           </li>
         </ul>

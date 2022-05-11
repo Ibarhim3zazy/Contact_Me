@@ -10,6 +10,9 @@ function Ibrahim_messenger() {
 function Ibrahim_whatsapp() {
   window.open('https://wa.me/+2001145452440');
 }
+function Ibrahim_sarhne() {
+  window.open('https://www.sarhne.com/azazi');
+}
 function Ibrahim_telegram() {
   window.open('https://t.me/Ibrahim3zazy');
 }
@@ -66,7 +69,7 @@ var x = setInterval(function() {
 }, 1000);
 
   let allmoney = parseInt(document.getElementById('allmoney').innerHTML);
-  allmoney_ = ((allmoney / 60000) * 100).toFixed(2);
+  allmoney_ = ((allmoney / 30000) * 100).toFixed(2);
   document.getElementById('progress_bar').innerHTML = allmoney_ + '%';
   document.getElementById('progress_bar').style.width = allmoney_ + '%';
 }
