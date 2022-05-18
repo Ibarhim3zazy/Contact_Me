@@ -20,7 +20,19 @@
           <span></span>
           <ul id="menu">
             <li><a href="index.php">الرئيسيه</a></li>
-            <li><a href="comparison.php">تبرع الان</a></li>
+            <li><a href="comparison.php">ساهم الان</a></li>
+            <li id="dropdown"><a href="aim.php">توعيه</a>
+              <ul>
+                <li><a href="aim.php#section1">المشاركة المجتمعية</a> </li>
+                <li><a href="aim.php#section2">تعريف المشاركة المجتمعية</a> </li>
+                <li><a href="aim.php#section3">أهمية المشاركة المجتمعية</a> </li>
+                <li><a href="aim.php#section4">أهداف المشاركة المجتمعية</a> </li>
+                <li><a href="aim.php#section5">أساليب المشاركة المجتمعية وصورها</a> </li>
+                <li><a href="aim.php#section6">أنواع المشاركة المجتمعية ومستوياتها</a> </li>
+                <li><a href="aim.php#section7">معوقات المشاركة المجتمعية</a> </li>
+                <li><a href="aim.php#section8">خاتمة</a> </li>
+              </ul>
+            </li>
             <li><a href="search.php">بحث</a></li>
             <li><a href="contact_us.php">تواصل معنا</a></li>
             <?php

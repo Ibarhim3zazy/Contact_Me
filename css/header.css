@@ -12,6 +12,40 @@ html {
   }
   .header_container {
     width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+  }
+  #dropdown{
+    position: relative;
+  }
+  #dropdown:hover ul{
+    display: block;
+  }
+  #dropdown ul{
+    width: fit-content;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 60px;
+    background-color: #f03;
+    display: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 60px;
+  }
+  #dropdown ul li a{
+    width: 100%;
+    padding: 20px 20px;
+    justify-content: center;
+    white-space: nowrap;
+    color: #fff;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 60px;
+  }
+  #dropdown ul li a:hover{
+    background-color: #99f;
+    cursor: pointer;
   }
   #menuToggle{
     height: 100%;
@@ -81,11 +115,22 @@ html {
     position: relative;
     z-index: 999999;
   }
+  #dropdown ul{
+    display: none;
+  }
+  nav[role="navigation"]{
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+  }
   #logout{
     background-color: transparent;
     height: fit-content;
   }
   a, #logout {
+  font-size: 20px !important;
+  white-space: nowrap;
   text-decoration: none;
   color: #1e1e23;
   opacity: 1;
@@ -100,6 +145,8 @@ html {
   ul {
     padding: 0;
     list-style-type: none;
+    min-height: 104vh;
+
   }
 
   .container {
