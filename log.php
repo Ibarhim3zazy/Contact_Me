@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700&display=swap"
       rel="stylesheet"
     />
-    <title>Contact Card</title>
+    <title>Sahem</title>
   </head>
   <body>
     <div class="align">

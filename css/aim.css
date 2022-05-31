@@ -8,6 +8,7 @@ html {
 
 /* exception for header .css */
 .header_container{
+  right: 0 ;
   position: fixed !important;
 }
 /* end exception */

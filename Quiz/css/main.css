@@ -1,0 +1,16 @@
+form input{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eee;
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#submit{
+  background-color: #77c;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #fff;
+}
